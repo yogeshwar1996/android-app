@@ -1,0 +1,117 @@
+package com.example.list_view;
+import java.util.*;
+
+import android.content.Context;
+import android.view.*;
+import android.widget.*;
+public class Adapter extends BaseAdapter implements Filterable {
+
+	Context c;
+	ArrayList<Route> Routes;
+	CustomFilter filter;
+	ArrayList<Route> filterlist;
+	
+	public Adapter(Context ctx,ArrayList<Route> Routes)
+	{
+		this.c=ctx;
+	     this.Routes=Routes;
+	     this.filterlist=Routes;     
+	}
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return Routes.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return Routes.get(position);
+		
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return Routes.indexOf(getItem(position)); 	
+	}     
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		LayoutInflater inflater=(LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		
+		if(convertView==null)
+		{
+			convertView=inflater.inflate(R.layout.model, null);
+			
+		}
+		
+		TextView nameTxt=(TextView) convertView.findViewById(R.id.nameTv);
+		ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
+		
+		
+		//setting data now
+		nameTxt.setText(Routes.get(position).getName());
+		img.setImageResource(Routes.get(position).getImg());
+		
+		return convertView;
+		
+	}
+
+	@Override
+	public Filter getFilter() {
+		// TODO Auto-generated method stub
+		if(filter==null)
+		{
+			filter= new CustomFilter();
+			
+		}
+		return filter;
+		
+	}
+class CustomFilter extends Filter
+{
+
+	@Override
+	protected FilterResults performFiltering(CharSequence constraint) {
+		// TODO Auto-generated method stub
+		FilterResults results=new FilterResults();
+		if(constraint!=null&&constraint.length()>0)
+		{
+			constraint=constraint.toString().toUpperCase();
+			ArrayList<Route> filters=new ArrayList<Route>();
+			
+			for(int i=0;i<=filterlist.size();i++)
+			{
+				if(filterlist.get(i).getName().toUpperCase().contains(constraint))
+				{
+					Route r = new Route(filterlist.get(i).getName(),filterlist.get(i).getImg());
+					filters.add(r);
+					
+				}
+			}
+			results.count=filters.size();
+			results.values=filters;
+			
+		}
+		else{
+			results.count=filterlist.size();
+			results.values=filterlist;
+			
+		}
+		
+		return results;
+	}
+
+	@Override
+	protected void publishResults(CharSequence constraint, FilterResults results) 
+	{
+		
+		// TODO Auto-generated method stub
+		Routes=(ArrayList<Route>) results.values;
+		notifyDataSetChanged();
+	}
+	 
+}
+}

@@ -1,0 +1,9 @@
+package com.example.navigationdrawer;
+
+public class DrawerList {
+
+	public DrawerList(String string, int icMessages) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

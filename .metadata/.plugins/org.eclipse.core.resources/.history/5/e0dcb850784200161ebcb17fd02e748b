@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.chdbuses.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+<item
+        android:id="@+id/action_settings1"
+        android:orderInCategory="99"
+        android:title="@string/action_ok"
+        app:showAsAction="always"/>
+<item
+        android:id="@+id/action_"
+        android:orderInCategory="98"
+        android:title="coke"
+        app:showAsAction="always"/>
+<item
+        android:id="@+id/action_settings4"
+        android:orderInCategory="97"
+        android:title="pepsi"
+        app:showAsAction="always"/>
+<item
+        android:id="@+id/1"
+        android:orderInCategory="96"
+        android:title="pp"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;fadein.xml&apos; to &apos;slide_out_left.xml&apos;&#x0D;&#x0A;- Original project: &apos;Hour3App&apos;&#x0D;&#x0A;- Destination element: &apos;slide_out_left.xml&apos;&#x0D;&#x0A;- Original element: &apos;fadein.xml&apos;" description="Copy file" element1="res/anim/fadein.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1468219162691" target="/CHD!!@BUSES/res/anim/slide_out_left.xml" units="0" version="1.0"/>
+</session>

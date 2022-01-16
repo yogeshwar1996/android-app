@@ -1,0 +1,39 @@
+package com.example.list;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.widget.*;
+import android.view.View;
+
+public class CustomAdapter extends ArrayAdapter<String>{
+
+	Context c;
+	String[] places;
+	int[] images;
+	LayoutInflater inflater;
+	
+	public CustomAdapter(Context context, String[] places,int[] images) 
+	{
+		super(context, R.layout.row,places);
+	
+		this.c=context;
+		this.places=places;
+		this.images=images;
+		
+	}
+//THIS INNER CLASS SHALL HOLD OUR VIEW
+	public class ViewHolder
+	{
+		TextView tv;
+		ImageView img;
+	}
+    public View getView(int position,View convertView,ViewGroup parent)
+    {
+    	if(convertView=null)
+    	{
+    		inflater =(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    	}
+    }
+}
+

@@ -1,0 +1,21 @@
+package com.example.chdbuses;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class ImageActivity extends ActionBarActivity {
+	ViewPager viewpager_;
+	CustomSwipeAdapter adapter_;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_image);
+
+        viewpager_=(ViewPager) findViewById(R.id.view_pager_);
+        adapter_= new CustomSwipeAdapter(this);
+        viewpager_.setAdapter(adapter_);
+	}
+
+}

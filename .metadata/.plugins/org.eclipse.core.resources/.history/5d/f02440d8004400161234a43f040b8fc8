@@ -1,0 +1,63 @@
+package com.example.navigationdrawer;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.*;
+
+import com.example.navigationdrawer.R.layout;
+
+public class DrawerAdapter extends ArrayAdapter<DrawerItem> 
+{
+	Context context;
+	List<DrawerItem> drawerlist;
+	int layoutResID;
+	
+
+	public DrawerAdapter(Context context, int layoutResourceID, List<DrawerList> listItems) 
+	{
+		// TODO Auto-generated constructor stub
+		super(context,layoutResourceID,listItems);
+		this.context=context;
+		this.drawerlist=listItems;
+		this.layoutResID=layoutResourceID;	
+	}
+
+public View getView(int position, View ConvertView, ViewGroup parent)
+{
+	DrawerItemHolder holder;
+	View v=ConvertView;
+if(v==null){
+	LayoutInflater inflater=((Activity)context).getLayoutInflater();
+	holder=new DrawerItemHolder();
+	v=inflater.inflate(layoutResID,parent,false);
+	holder.ItemName=(TextView)v.findViewById(R.id.image_name);
+	holder.icon=(ImageView)v.findViewById(R.id.drawer_image);
+	v.setTag(holder);
+}
+else
+{
+	
+	holder=(DrawerItemHolder)v.getTag();
+	
+}
+	DrawerItem dItem=(DrawerItem)this.DrawerList.get(position);
+	
+	holder.icon.setImageDrawable(v.getResources().getDrawable(dItem.getImgResID()));
+	
+	
+			
+}
+private static class DrawerItemHolder
+{
+	TextView ItemName;
+	ImageView icon;
+	
+}
+}

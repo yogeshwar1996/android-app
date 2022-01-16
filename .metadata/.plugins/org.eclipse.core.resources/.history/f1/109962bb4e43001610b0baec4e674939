@@ -1,0 +1,77 @@
+package com.example.chdbuses;
+
+import android.app.Activity;
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class ISBT43 extends Activity {
+	
+	ListView lv;	//
+	
+	String[] Buses={
+								"Route4A",
+								"Route4C",
+								"Route5A",
+								"Route5C",
+								"Route7A",
+								"Route7C",
+								"Route8A",
+								"Route10",
+								"Route17",
+								"Route18",
+								"Route20",
+								"Route22",
+								"Route25",
+								"Route26",
+								"Route27",
+								"Route28",
+								"Route30",
+								"Route32",
+								"Route35B",
+								"Route35",
+								"Route37",
+								"Route39",
+								"Route40",
+								"Route123A",
+	                        };
+	ArrayAdapter<String> adapter;//
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_isbt43);
+         
+		lv=(ListView) findViewById(R.id.listView1);//
+		
+     	 adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,Buses);//
+		
+		lv.setAdapter(adapter);//
+		
+	
+	
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.isbt43, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

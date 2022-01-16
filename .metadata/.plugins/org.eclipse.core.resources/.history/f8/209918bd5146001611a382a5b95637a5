@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chdbuses.Song" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="College wali G.T. road to kinne raah nikle Kuj nu mil gaye naukari, Te kuj ho k tabah nikle College wali G.T. road to kinne raah nikle O College wali G.T. road to kinne raah nikle…. Os leactutre hall de last bench te mera naa khunya – 2 Jithe baith kade c os kudi da ik supna bunya – 2 Naa yaar rhe na o mili jad saade saah nikle College wali G.T. road to kinne raah nikle O College wali G.T. road to kinne raah nikle Kuj nu mil gaye naukari, kuj ho k tabah nikle College wali G.T. road to kinne raah nikle…. Ik din colege muhro di me langhya sir jhuk gya – 2 Os jannat wargi thaan nu sijjda krn laye ruk gya – 2 Rehan wasde ehde khair khvaa, jad nikle ehi duaa nikle College wali G.T. road to kinne raah nikle O College wali G.T. road to kinne raah nikle Kuj nu mil gaye naukari, kuj ho k tabah nikle College wali G.T. road to kinne raah nikle…. C college wich Sardar kade, dildar kade, fankaar kade, Hun shakala bhulda janda hai jo c yaaran da yaar kade C college wich Sardar kade, dildar kade, fankaar kade, Hun shakala bhulda janda hai jo c yaaran da yaar kade Kuj saanu aakad maar gaye, kuj sajjan beparwah nikle College wali G.T. road to kinne raah nikle O College wali G.T. road to kinne raah nikle Kuj nu mil gaye naukari, kuj ho k tabah nikle College wali G.T. road to kinne raah nikle …"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+package com.example.chdbuses;
+
+import java.io.IOException;
+
+import android.app.Activity;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class Gaana extends Activity {
+	MediaPlayer mplayer=new MediaPlayer();
+	AssetFileDescriptor audio;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_gaana);
+	}
+protected void onRseume()
+{
+		super.onResume();
+		try{
+			audio=getAssets().openFd("bus_song.mp3");
+			mplayer.setDataSource(audio.getFileDescriptor(),audio.getStartOffset(),audio.getLength());
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	
+}
+protected void onPause(){
+	super.onPause();
+	mplayer.release();
+}
+
+
+}

@@ -1,0 +1,82 @@
+package com.example.chdbuses;
+
+import android.content.Context;
+import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class SwipeAdapter extends PagerAdapter {
+   private int[] image_resources={
+		   R.drawable.ao,
+		   R.drawable.back,
+		   R.drawable.bb,
+		   R.drawable.chd_map,
+		   R.drawable.dad,
+		   R.drawable.grd,
+		   R.drawable.gre,
+		   R.drawable.images,
+		   R.drawable.imagesjh,
+		   R.drawable.img,
+		   R.drawable.img1,
+		   R.drawable.img2,
+		   R.drawable.img3,
+		   R.drawable.ka,
+		   R.drawable.kak,
+		   R.drawable.kd,
+		   R.drawable.kole,
+		   R.drawable.kori,
+		   R.drawable.ks,
+		   R.drawable.lol,
+		   R.drawable.lsl,
+		   R.drawable.po,
+		   R.drawable.qq,
+		   R.drawable.sk,
+		   R.drawable.sl,
+		   R.drawable.so  
+		   };
+    	private Context Ct;
+    	private LayoutInflater Linflater;
+    	
+    	public SwipeAdapter(Context ctx)
+    	{
+    		this.Ct=ctx;
+    	}
+    	
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return image_resources.length;
+	}
+
+	@Override
+	public boolean isViewFromObject(View view, Object o) {
+		// TODO Auto-generated method stub
+		return ( view==(LinearLayout)o);
+	}
+	
+	public Object instantiateItem(ViewGroup container,int position)
+	{
+		Linflater=(LayoutInflater) Ct.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		
+		View item=Linflater.inflate(R.layout.layout,container,false);
+		ImageView imageView=(ImageView)item.findViewById(R.id.image_view);
+		TextView textView=(TextView)item.findViewById(R.id.image_count);
+		
+		imageView.setImageResource(image_resources[position]);
+		textView.setText("!!@_"+position);
+		container.addView(item);
+	 	return item;
+	}
+		
+		
+	
+	public void destroyItem(ViewGroup container,int postion,Object object)
+	{
+	container.removeView((LinearLayout)object);	
+	}
+
+}

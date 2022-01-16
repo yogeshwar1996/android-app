@@ -1,0 +1,10 @@
+package com.example.navigationdrawer;
+
+public class DrawerAdapter {
+
+	public DrawerAdapter(MainActivity mainActivity, int customdrawer,
+			java.util.List<DrawerList> dataList) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

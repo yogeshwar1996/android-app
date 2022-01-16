@@ -1,0 +1,43 @@
+package com.example.navigationdrawer;
+
+import android.content.Context;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.*;
+
+public class DrawerAdapter extends ArrayAdapter<DrawerItem> 
+{
+	Context context;
+	List<DrawerItem> drawerlist;
+	int layoutResID;
+	
+
+	public DrawerAdapter(Context context, int layoutResourceID, List<DrawerList> listItems) 
+	{
+		// TODO Auto-generated constructor stub
+		super(context,layoutResourceID,listItems);
+		this.context=context;
+		this.drawerlist=listItems;
+		this.layoutResID=layoutResourceID;	
+	}
+
+public View getView(int position, View ConvertView, ViewGroup parent)
+{
+	DrawerItemHolder holder;
+	View v=ConvertView;
+	LayoutInflater inflater=((Activity)context).getLayoutInflater();
+	holder=new DrawerItemHolder();
+	view=inflater.inflate(layout.ResID,parent,false);
+	
+	
+	
+}
+private static class DrwerItemHolder{
+	TextView ItemName;
+	ImageView icon;
+	
+}
+}

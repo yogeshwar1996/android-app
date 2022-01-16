@@ -1,0 +1,93 @@
+package com.example.list_view;
+
+import android.app.*;
+import android.os.Bundle; 
+import android.view.*;
+import android.widget.*;
+import android.widget.SearchView.OnQueryTextListener;
+
+import java.util.*;
+
+
+public class MainActivity extends Activity
+{
+
+	ListView lv;
+	SearchView sv;
+	String[] names={ "Delhi","Chandigarh","Lucknow","Pune","Mumbai","Amritsar","Daehradun","Calcutta","Patiala"};
+	int[] images={
+								R.drawable.busstop,
+								R.drawable.cloud,
+								R.drawable.game,
+								R.drawable.group,
+								R.drawable.help,
+								R.drawable.tonga,
+								R.drawable.turkey,
+								R.drawable.tashkent,
+								R.drawable.imgres
+								};
+    @Override
+    protected void onCreate(Bundle savedInstanceState) 
+    {
+		        super.onCreate(savedInstanceState);
+		        setContentView(R.layout.activity_main);
+		        
+		        lv=(ListView) findViewById(R.id.listView1);
+		        sv=(SearchView) findViewById(R.id.searchView1);
+		        
+		        final Adapter adapter= new Adapter(this,getRoutes());
+		        lv.setAdapter(adapter);
+		        
+		        sv.setOnQueryTextListener(new OnQueryTextListener()
+		        {
+	
+				
+	
+				@Override
+				public boolean onQueryTextChange(String query) 
+				{
+					// TODO Auto-generated method stub
+					adapter.getFilter().filter(query);
+					return false;
+				}
+
+				@Override
+				public boolean onQueryTextSubmit(String query) {
+					// TODO Auto-generated method stub
+					return false;
+				}
+	           }); 
+    }
+    //////////////////////////////////////
+       private ArrayList<Player>  getPlayers()
+		{
+			ArrayList<Player> players=  new  ArrayList<Player>();
+			Player p;
+			
+			for(int i=0;i<names.length;i++)
+			{
+				p= new Player(names[i],images[i]);
+				players.add(p);
+			}
+	    	return players;
+		}
+       ////////////////////////
+       @Override
+       public boolean onCreateOptionsMenu(Menu menu) 
+       {
+        // Inflate the menu; this adds items to the action bar if it is present.
+          getMenuInflater().inflate(R.menu.main, menu);
+          return true;
+      } 
+      @Override
+      public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+        }
+}

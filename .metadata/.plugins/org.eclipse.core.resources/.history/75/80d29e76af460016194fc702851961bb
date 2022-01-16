@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chdbuses"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".Splash_Screen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
+        <activity
+            android:name=".Routes"
+            android:label="@string/title_activity_routes"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
+        <activity
+            android:name=".ISBT17"
+            android:label="@string/title_activity_isbt17" >
+        </activity>
+        <activity
+            android:name=".PGI"
+            android:label="@string/title_activity_pgi" >
+        </activity>
+        <activity
+            android:name=".ISBT43"
+            android:label="@string/title_activity_isbt43" >
+        </activity>
+        <activity
+            android:name=".Buses"
+            android:label="@string/title_activity_buses" >
+        </activity>
+        <activity
+            android:name=".Buffer"
+            android:label="@string/title_activity_buffer" >
+        </activity>
+        <activity
+            android:name=".I_Activity"
+            android:label="@string/title_activity_i_"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
+        <activity
+            android:name=".Options"
+            android:label="@string/title_activity_options" >
+        </activity>
+        <activity
+            android:name=".Gaana"
+            android:label="!!@Gaana"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
+        <activity
+            android:name=".Bus1A"
+            android:label="@string/title_activity_bus1A" >
+        </activity>
+        <activity
+            android:name=".Bus1C"
+            android:label="@string/title_activity_bus1C" >
+        </activity>
+        <activity
+            android:name=".Bus2A"
+            android:label="@string/title_activity_bus2A" >
+        </activity>
+        <activity
+            android:name=".Bus2C"
+            android:label="@string/title_activity_bus2C" >
+        </activity>
+        <activity
+            android:name=".Bus2D"
+            android:label="@string/title_activity_bus2_d" >
+        </activity>
+        <activity
+            android:name=".Bus2B"
+            android:label="@string/title_activity_bus2_b" >
+        </activity>
+        <activity
+            android:name=".Bus2E"
+            android:label="@string/title_activity_bus2_e" >
+        </activity>
+        <activity
+            android:name=".Bus2F"
+            android:label="@string/title_activity_bus2_f" >
+        </activity>
+        <activity
+            android:name=".Bus3A"
+            android:label="@string/title_activity_bus3" >
+        </activity>
+        <activity
+            android:name=".Bus3C"
+            android:label="@string/title_activity_bus3_c" >
+        </activity>
+        <activity
+            android:name=".Bus4A"
+            android:label="@string/title_activity_bus4" >
+        </activity>
+        <activity
+            android:name=".Bus4C"
+            android:label="@string/title_activity_bus4_c" >
+        </activity>
+        <activity
+            android:name=".Bus5C"
+            android:label="@string/title_activity_bus5_c" >
+        </activity>
+        <activity
+            android:name=".Bus5A"
+            android:label="@string/title_activity_bus5" >
+        </activity>
+        <activity
+            android:name=".Bus6A"
+            android:label="@string/title_activity_bus6" >
+        </activity>
+        <activity
+            android:name=".Bus6C"
+            android:label="@string/title_activity_bus6_c" >
+        </activity>
+        <activity
+            android:name=".Bus7A"
+            android:label="@string/title_activity_bus7" >
+        </activity>
+        <activity
+            android:name=".Bus7C"
+            android:label="@string/title_activity_bus7_c" >
+        </activity>
+        <activity
+            android:name=".Bus9A"
+            android:label="@string/title_activity_bus9" >
+        </activity>
+        <activity
+            android:name=".Bus9C"
+            android:label="@string/title_activity_bus9_c" >
+        </activity>
+        <activity
+            android:name=".Bus8A"
+            android:label="@string/title_activity_bus8" >
+        </activity>
+        <activity
+            android:name=".Bus10A"
+            android:label="@string/title_activity_bus10" >
+        </activity>
+        <activity
+            android:name=".Bus10C"
+            android:label="@string/title_activity_bus10_c" >
+        </activity>
+        <activity
+            android:name=".Bus11A"
+            android:label="@string/title_activity_bus11" >
+        </activity>
+        <activity
+            android:name=".Bus11C"
+            android:label="@string/title_activity_bus11_c" >
+        </activity>
+        <activity
+            android:name=".Bus12A"
+            android:label="@string/title_activity_bus12" >
+        </activity>
+        <activity
+            android:name=".Bus12C"
+            android:label="@string/title_activity_bus12_c" >
+        </activity>
+        <activity
+            android:name=".Bus13A"
+            android:label="@string/title_activity_bus13" >
+        </activity>
+        <activity
+            android:name=".Bus13C"
+            android:label="@string/title_activity_bus13_c" >
+        </activity>
+        <activity
+            android:name=".Bus14A"
+            android:label="@string/title_activity_bus14" >
+        </activity>
+        <activity
+            android:name=".Bus14C"
+            android:label="@string/title_activity_bus14_c" >
+        </activity>
+        <activity
+            android:name=".Bus15A"
+            android:label="@string/title_activity_bus15" >
+        </activity>
+        <activity
+            android:name=".Bus15C"
+            android:label="@string/title_activity_bus15_c" >
+        </activity>
+        <activity
+            android:name=".Bus18"
+            android:label="@string/title_activity_bus18" >
+        </activity>
+        <activity
+            android:name=".Bus18A"
+            android:label="@string/title_activity_bus18" >
+        </activity>
+        <activity
+            android:name=".Bus19"
+            android:label="@string/title_activity_bus19" >
+        </activity>
+        <activity
+            android:name=".Bus19A"
+            android:label="@string/title_activity_bus19" >
+        </activity>
+        <activity
+            android:name=".Bus20_78"
+            android:label="@string/title_activity_bus20_78" >
+        </activity>
+        <activity
+            android:name=".Bus22"
+            android:label="@string/title_activity_bus22" >
+        </activity>
+        <activity
+            android:name=".Bus23A"
+            android:label="@string/title_activity_bus23" >
+        </activity>
+        <activity
+            android:name=".Bus20"
+            android:label="@string/title_activity_bus20" >
+        </activity>
+        <activity
+            android:name=".Bus24A"
+            android:label="@string/title_activity_bus24" >
+        </activity>
+        <activity
+            android:name=".Bus24C"
+            android:label="@string/title_activity_bus24_c" >
+        </activity>
+        <activity
+            android:name=".Bus25"
+            android:label="@string/title_activity_bus25" >
+        </activity>
+        <activity
+            android:name=".Bus26"
+            android:label="@string/title_activity_bus26" >
+        </activity>
+        <activity
+            android:name=".Bus27"
+            android:label="@string/title_activity_bus27" >
+        </activity>
+        <activity
+            android:name=".Bus28"
+            android:label="@string/title_activity_bus28" >
+        </activity>
+        <activity
+            android:name=".Bus28A"
+            android:label="@string/title_activity_bus28" >
+        </activity>
+        <activity
+            android:name=".Bus28C"
+            android:label="@string/title_activity_bus28_c" >
+        </activity>
+        <activity
+            android:name=".Bus29"
+            android:label="@string/title_activity_bus29" >
+        </activity>
+        <activity
+            android:name=".Bus30"
+            android:label="@string/title_activity_bus30" >
+        </activity>
+        <activity
+            android:name=".Bus30A"
+            android:label="@string/title_activity_bus30" >
+        </activity>
+        <activity
+            android:name=".Bus30B"
+            android:label="@string/title_activity_bus30_b" >
+        </activity>
+        <activity
+            android:name=".Bus32"
+            android:label="@string/title_activity_bus32" >
+        </activity>
+        <activity
+            android:name=".Bus32A"
+            android:label="@string/title_activity_bus32" >
+        </activity>
+        <activity
+            android:name=".Bus35"
+            android:label="@string/title_activity_bus35" >
+        </activity>
+        <activity
+            android:name=".Bus35A"
+            android:label="@string/title_activity_bus35" >
+        </activity>
+        <activity
+            android:name=".Bus35B"
+            android:label="@string/title_activity_bus35_b" >
+        </activity>
+        <activity
+            android:name=".Bus37"
+            android:label="@string/title_activity_bus37" >
+        </activity>
+        <activity
+            android:name=".Bus39"
+            android:label="@string/title_activity_bus39" >
+        </activity>
+        <activity
+            android:name=".Bus53"
+            android:label="@string/title_activity_bus53" >
+        </activity>
+        <activity
+            android:name=".Bus40"
+            android:label="@string/title_activity_bus40" >
+        </activity>
+        <activity
+            android:name=".Bus45"
+            android:label="@string/title_activity_bus45" >
+        </activity>
+        <activity
+            android:name=".Bus71"
+            android:label="@string/title_activity_bus71" >
+        </activity>
+        <activity
+            android:name=".Bus79"
+            android:label="@string/title_activity_bus79" >
+        </activity>
+        <activity
+            android:name=".Bus85"
+            android:label="@string/title_activity_bus85" >
+        </activity>
+        <activity
+            android:name=".Bus123"
+            android:label="@string/title_activity_bus123" >
+        </activity>
+        <activity
+            android:name=".Bus126"
+            android:label="@string/title_activity_bus126" >
+        </activity>
+        <activity
+            android:name=".Bus132"
+            android:label="@string/title_activity_bus132" >
+        </activity>
+        <activity
+            android:name=".Bus143"
+            android:label="@string/title_activity_bus143" >
+        </activity>
+        <activity
+            android:name=".Bus201"
+            android:label="@string/title_activity_bus201" >
+        </activity>
+        <activity
+            android:name=".Bus208"
+            android:label="@string/title_activity_bus208" >
+        </activity>
+        <activity
+            android:name=".Bus207"
+            android:label="@string/title_activity_bus207" >
+        </activity>
+        <activity
+            android:name=".Bus206A"
+            android:label="@string/title_activity_bus206" >
+        </activity>
+        <activity
+            android:name=".Bus205"
+            android:label="@string/title_activity_bus205" >
+        </activity>
+        <activity
+            android:name=".Bus203"
+            android:label="@string/title_activity_bus203" >
+        </activity>
+        <activity
+            android:name=".Bus202"
+            android:label="@string/title_activity_bus202" >
+        </activity>
+        <activity
+            android:name=".Bus210"
+            android:label="@string/title_activity_bus210" >
+        </activity>
+        <activity
+            android:name=".Bus211"
+            android:label="@string/title_activity_bus211" >
+        </activity>
+        <activity
+            android:name=".Bus212"
+            android:label="@string/title_activity_bus212" >
+        </activity>
+        <activity
+            android:name=".Bus213"
+            android:label="@string/title_activity_bus213" >
+        </activity>
+    </application>
+
+</manifest>

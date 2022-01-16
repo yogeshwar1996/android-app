@@ -1,0 +1,53 @@
+package com.example.chdbuses;
+
+import android.content.Context;
+import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class CustomSwipeAdapter_ extends PagerAdapter {
+private int[]  images_view={R.drawable.back,R.drawable.bus,R.drawable.cloud,R.drawable.gre,R.drawable.group,R.drawable.help};
+private Context ctxt;
+private LayoutInflater layoutinflater_;
+
+public CustomSwipeAdapter_(Context ctxt)
+{
+	this.ctxt=ctxt;
+	
+}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return images_view.length;	
+	}
+
+	@Override
+	public boolean isViewFromObject(View view, Object o) {
+	
+		return  (view==(LinearLayout)o);
+	}
+	
+	public Object instantiateItem(ViewGroup container,int position)
+	{
+	  layoutinflater_ =(LayoutInflater) ctxt.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	  View item_view_= layoutinflater_.inflate(R.layout.swiped,container,false);
+	  ImageView image_= (ImageView) item_view_.findViewById(R.id.image_viewer);
+	  TextView text_= (TextView) item_view_.findViewById(R.id.image_counter);
+	  image_.setImageResource(images_view[position]);	  
+	  text_.setText("y_!@"+position);
+	  container.addView(item_view_);
+		return item_view_;
+	}
+	
+	public void destroyItem(ViewGroup container,int postion,Object object)
+	{
+	container.removeView((LinearLayout)object);
+	
+	}
+
+}
